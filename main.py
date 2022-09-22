@@ -7,8 +7,6 @@ import os
 import random
 
 today = datetime.now()
-meet_date = os.environ['MEET_DATE']
-love_date = os.environ['LOVE_DATE']
 
 city = os.environ['CITY']
 # birthday = os.environ['BIRTHDAY']
@@ -19,6 +17,8 @@ app_secret = os.environ["APP_SECRET"]
 user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
+meet_date = os.environ['MEET_DATE']
+love_date = os.environ['LOVE_DATE']
 
 def get_weather():
   url = "http://autodev.openspeech.cn/csp/api/v2.1/weather?openId=aiuicus&clientType=android&sign=android&city=" + city
