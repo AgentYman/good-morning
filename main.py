@@ -110,11 +110,11 @@ data = {
             "value": get_meetdays(), 
             "color": get_random_color()
         },
-    "love_days":{
+    "love":{
             "value": get_lovedays(), 
             "color": get_random_color()
         },
-    "words":{
+    "word":{
             "value": get_words(), 
             "color": get_random_color()
         }
