@@ -1,5 +1,6 @@
 from datetime import date, datetime
 from time import time, localtime
+from pytz import timezone
 import math
 from turtle import pos
 from wechatpy import WeChatClient
@@ -10,7 +11,7 @@ from requests import get, post
 import os
 import random
 
-today = datetime.now()
+today = datetime.now(timezone('Asia/Shanghai'))
 meet_date = os.environ['MEET_DATE']
 love_date = os.environ['LOVE_DATE']
 
