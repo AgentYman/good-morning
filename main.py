@@ -35,7 +35,7 @@ def get_weather():
 #   return weather['weather'], math.floor(weather['temp']), math.floor(weather['tempn'])  # temp is highest ; tempn is lowest
     
     # 城市id
-    city_id = cityinfo.cityInfo[city]["AREAID"]
+    city_id = cityinfo.cityInfo[province][city]["AREAID"]
     # city_id = 101280101
     # 毫秒级时间戳
     t = (int(round(time() * 1000)))
@@ -88,12 +88,12 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature, temperature_n = get_weather()
-data = {"today":{"value":get_today(), "color": get_random_color()},
-        "weather":{"value":wea, "color": get_random_color()},
-        "temperature":{"value":temperature, "color": get_random_color()},
-        "temperaturen":{"value":temperature_n, "color": get_random_color()},
-        "meet_days":{"value":get_meetdays(), "color": get_random_color()},
-        "love":{"value":get_lovedays(), "color": get_random_color()},
-        "word":{"value":get_words(), "color": get_random_color()}}
+data = {"today":{"value":get_today(), "color":"#00FFFF"},
+        "weather":{"value":wea, "color":"#808A87"},
+        "temperature":{"value":temperature, "color":"#ED9121"},
+        "temperaturen":{"value":temperature_n, "color":"#00FF00"},
+        "meet_days":{"value":get_meetdays(), "color":"#FF6100"},
+        "love_days":{"value":get_lovedays(), "color":"#87CEEB"},
+        "words":{"value":get_words(), "color":"#FF8000"}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
