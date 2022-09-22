@@ -54,6 +54,6 @@ client = WeChatClient(app_id, app_secret)
 
 wm = WeChatMessage(client)
 wea, temperature = get_weather()
-data = {"weather":{"value":wea},"temperature":{"value":temperature},"meet_days":{"value":get_meetdays()},"love_days":{"value":get_lovedays()},"words":{"value":get_words(), "color":get_random_color()}}
+data = {"weathre":{"value":wea},"temperature":{"value":temperature},"meet_days":{"value":get_meetdays()},"love_days":{"value":get_lovedays()},"words":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
