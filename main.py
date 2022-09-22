@@ -11,7 +11,7 @@ from requests import get, post
 import os
 import random
 
-today = datetime.now(timezone('Asia/Shanghai'))
+today = datetime.now()
 meet_date = os.environ['MEET_DATE']
 love_date = os.environ['LOVE_DATE']
 
@@ -25,6 +25,7 @@ user_id = os.environ["USER_ID"]
 template_id = os.environ["TEMPLATE_ID"]
 
 def get_today():
+    today = datetime.now(timezone('Asia/Shanghai'))
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     week = week_list[today.isoweekday()]
     return str(today).split()[0] + " " + week
