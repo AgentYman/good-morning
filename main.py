@@ -93,7 +93,7 @@ data = {"today":{"value":get_today(), "color":get_random_color()},
         "temperature":{"value":temperature, "color":get_random_color()},
         "temperaturen":{"value":temperature_n, "color":get_random_color()},
         "meet_days":{"value":get_meetdays(), "color":get_random_color()},
-        "love_days":{"value":get_lovedays(), "color":get_random_color()},
-        "words":{"value":get_words(), "color":get_random_color()}}
+        "love":{"value":get_lovedays(), "color":get_random_color()},
+        "word":{"value":get_words(), "color":get_random_color()}}
 res = wm.send_template(user_id, template_id, data)
 print(res)
