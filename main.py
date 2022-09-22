@@ -35,7 +35,7 @@ def get_weather():
 #   return weather['weather'], math.floor(weather['temp']), math.floor(weather['tempn'])  # temp is highest ; tempn is lowest
     
     # 城市id
-    city_id = cityinfo.cityInfo[province][city]["AREAID"]
+    city_id = cityinfo.cityInfo[city]["AREAID"]
     # city_id = 101280101
     # 毫秒级时间戳
     t = (int(round(time() * 1000)))
